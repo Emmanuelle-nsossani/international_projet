@@ -1,14 +1,154 @@
-/* FOR EXAMPLE */
+/* Common CSS to copy paste everywhere */
 
-/* :root {
-    --yellow: #FCC306;
-    --green: #0A363F;
-    --transition_normal: ease-in 0.3s;
-    --titre: 'Bebas Neue';
-    --corp: 'Open Sans';
+@import url('https://fonts.cdnfonts.com/css/top-secret-stamp');
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+
+@font-face {
+    font-family: 'TypewriterPress';
+    src: url('../font/TypewriterPress-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AltoneTrial';
+    src: url('../font/AltoneTrial-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --black: #1B1B1E;
+    --red: #96031A;
+    --yellow: #FAA916;
+    --grey: #D5C9BD;
+    --green: #283A47;
+    --white: #FFF8F0;
+    --font-headline: 'Top Secret Stamp', sans-serif;
+    --font-headline-bis: 'COCOGOOSE', sans-serif;
+    --font-subtitle: 'TypewriterPress', sans-serif;
+    --font-text: 'AltoneTrial', sans-serif;
 }
 
 ::selection {
-    background-color: #fcc30682;
-    color: white;
-} */
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+body, html {
+    margin: 0;
+    font-family: 'AltoneTrial';
+
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: var(--black);
+    padding: 0 100px;
+}
+
+header a, header p {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#first-header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--white);
+}
+
+.first-header-sous {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#logo-header {
+    width: 70px;
+}
+
+img {
+    width: 50px;
+}
+
+.link-button {
+    background: var(--white);
+    color: black;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#second-header ul {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+    position: relative;
+    width: 70px;
+    height: 30px;
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: var(--white);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider {
+    background-color: var(--black);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--black);
+    box-shadow: inset 12px -4px 0px 0px var(--black);
+    background-color: var(--black);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+.checkbox:checked~.slider::before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+    background-color: var(--white);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
