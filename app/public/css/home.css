@@ -152,3 +152,105 @@ img {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: var(--black);
+    padding: 40px 100px 20px;
+    color: var(--white);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.footer-logo {
+    width: 120px; 
+    height: auto;
+}
+
+.social {
+    display: flex;
+    position: relative;
+    width: 108px;
+    height: 28px;
+}
+
+.social a {
+    display: block;
+}
+
+.social img {
+    width: 28px;
+    height: 28px;
+}
+
+.social .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social .icon1 {
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+
+.social .icon2 {
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-nav-section h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-subtitle);
+    font-size: 18px;
+}
+
+.footer-nav-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-section li {
+    margin-bottom: 10px;
+}
+
+.footer-nav-section a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-text);
+    line-height: 19px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid var(--white);
+    font-size: 14px;
+    font-family: var(--font-text);
+}
