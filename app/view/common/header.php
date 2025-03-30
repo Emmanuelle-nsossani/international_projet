@@ -62,7 +62,7 @@
                 <ul>
                     <li><a href=""><?= translateText("Preventions", $lang); ?></a></li>
                     <ul>
-                        <li><?= translateText("Rubriques", $lang); ?> &#10095</li>
+                        <li id="button-rub-menu"><?= translateText("Rubriques", $lang); ?> &#10095</li>
                         <div id="rub-menu">
                             <li><a href=""><?= translateText("True Crime", $lang); ?></a></li>
                             <li><a href=""><?= translateText("Psychology oOf Murderers", $lang); ?></a></li>

@@ -77,6 +77,13 @@ header p,
 header li {
     color: var(--white);
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header a:hover,
+header #button-rub-menu:hover {
+    text-decoration: line-through;
+    transition: all 0.3s ease;
 }
 
 #first-header {
@@ -125,15 +132,27 @@ header li {
 
 /* SOUS MENU */
 
+#button-rub-menu {
+    cursor: pointer;
+}
+
 #rub-menu {
+    max-height: 0;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 0 20px;
     position: absolute;
     transform: translateY(240px);
     border-radius: 30px;
     background-color: var(--black);
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+#rub-menu.active {
+    max-height: 700px; 
+    padding: 20px;
 }
 
 #rub-menu li {
