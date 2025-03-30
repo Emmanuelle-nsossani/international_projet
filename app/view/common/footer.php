@@ -1,7 +1,7 @@
 <footer>
 
 <!-- FOOTER HERE -->
- FOOTER
+<?= translateText(" FOOTER HERE", $lang); ?>
 
 </footer>
 

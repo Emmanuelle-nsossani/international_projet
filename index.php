@@ -1,6 +1,13 @@
 <?php
 
-$page_title = "ICE CREAM";
+require_once __DIR__ . '/app/includes/deepl.php';
+
+// Set the chosen language
+$lang = $_GET['lang'] ?? ($_SESSION['lang'] ?? 'fr');
+$_SESSION['lang'] = $lang;
+
+
+$page_title = "ICE CRIME";
 $css = "home.css";
 
 ob_start();

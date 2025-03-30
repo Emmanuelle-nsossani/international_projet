@@ -98,7 +98,7 @@ header li {
 /* SOUS MENU */
 
 #rub-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     text-align: center;
     padding: 20px;
