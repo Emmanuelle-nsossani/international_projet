@@ -40,3 +40,13 @@
         IceCrimes © 2024-2025, Tout droits réservés
     </div>
 </footer>
+
+
+<script defer="defer" src="app/public/js/header.js"></script>
+<script defer="defer" src="app/public/js/light-mode.js"></script>
+
+</body>
+
+
+</html>
+

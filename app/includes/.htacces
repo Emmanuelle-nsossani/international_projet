@@ -1,0 +1,4 @@
+# Bloque l'accès direct aux fichiers PHP
+<FilesMatch "\.(php)$">
+    Deny from all
+</FilesMatch>
