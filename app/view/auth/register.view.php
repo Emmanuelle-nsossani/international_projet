@@ -1,8 +1,8 @@
 <form action="app/includes/auth.php" method="POST">
-    <input type="text" name="username" placeholder="Nom d'utilisateur" required>
-    <input type="text" name="pseudo" placeholder="Pseudo" required>
-    <input type="password" name="password" placeholder="Mot de passe" required>
-    <input type="password" name="confirm_password" placeholder="Confirmer le mot de passe" required>
-    <button type="submit" name="register">S'inscrire</button>
+    <input type="text" name="username" placeholder="<?= translateText("Nom d'utilisateur", $lang); ?>" required>
+    <input type="text" name="pseudo" placeholder="<?= translateText("Pseudo", $lang); ?>" required>
+    <input type="password" name="password" placeholder="<?= translateText("Mot de passe", $lang); ?>" required>
+    <input type="password" name="confirm_password" placeholder="<?= translateText("Confirmer le mot de passe", $lang); ?>" required>
+    <button type="submit" name="register"><?= translateText("S'inscrire", $lang); ?></button>
 </form>
-<a href="login.php">Déjà un compte ? Se connecter</a>
+<a href="login.php"><?= translateText("Déjà un compte ? Se connecter", $lang); ?></a>
