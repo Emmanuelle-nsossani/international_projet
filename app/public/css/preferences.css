@@ -1,0 +1,561 @@
+.vector-icon {
+    position: absolute;
+    height: 75.07%;
+    width: 111.04%;
+    top: 76.58%;
+    right: -2.36%;
+    bottom: -51.65%;
+    left: -8.68%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+/* Common CSS to copy paste everywhere */
+
+@import url('https://fonts.cdnfonts.com/css/top-secret-stamp');
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+
+@font-face {
+    font-family: 'TypewriterPress';
+    src: url('../font/TypewriterPress-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AltoneTrial';
+    src: url('../font/AltoneTrial-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --black: #1B1B1E;
+    --red: #96031A;
+    --yellow: #FAA916;
+    --grey: #D5C9BD;
+    --green: #283A47;
+    --white: #FFF8F0;
+    --font-headline: 'Top Secret Stamp', sans-serif;
+    --font-headline-bis: 'COCOGOOSE', sans-serif;
+    --font-subtitle: 'TypewriterPress', sans-serif;
+    --font-text: 'AltoneTrial', sans-serif;
+}
+
+::selection {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+body, html {
+    margin: 0;
+    font-family: 'AltoneTrial';
+
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: var(--black);
+    padding: 0 100px;
+}
+
+header a, header p {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#first-header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--white);
+}
+
+.first-header-sous {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#logo-header {
+    width: 70px;
+}
+
+img {
+    width: 50px;
+}
+
+.link-button {
+    background: var(--white);
+    color: black;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#second-header ul {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+    position: relative;
+    width: 70px;
+    height: 30px;
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: var(--white);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider {
+    background-color: var(--black);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--black);
+    box-shadow: inset 12px -4px 0px 0px var(--black);
+    background-color: var(--black);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+.checkbox:checked~.slider::before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+    background-color: var(--white);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+/*-------FOOTER-------*/
+
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #000;
+  	width: 1440px;
+  	height: 341px;
+}
+
+.social-icon-twitter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 28px;
+    height: 28px;
+}
+
+.social-icon-facebook {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    width: 28px;
+    height: 28px;
+}
+
+.social-icon-instagram {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 28px;
+    height: 28px;
+}
+
+.social-icons-container {
+    width: 108px;
+    position: relative;
+    height: 28px;
+}
+
+.help-menu {
+  	position: relative;
+  	letter-spacing: 3px;
+  	line-height: 18px;
+  	text-transform: uppercase;
+}
+
+.lorem-ipsum {
+  	margin: 0;
+  	white-space: pre-wrap;
+}
+
+.blank-line {
+  	margin: 0;
+}
+
+.about-features-works-container {
+  	width: 113px;
+  	position: relative;
+  	line-height: 19px;
+  	font-family: ABeeZee;
+  	color: rgba(255, 255, 255, 0.6);
+  	display: inline-block;
+}
+
+.help-menu-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 26px;
+}
+.about-features-works-container1 {
+  	position: relative;
+  	line-height: 19px;
+  	font-family: ABeeZee;
+  	color: rgba(0, 0, 0, 0.6);
+}
+.about-features-works-container2 {
+  	width: 149px;
+  	position: relative;
+  	line-height: 19px;
+  	font-family: ABeeZee;
+  	color: rgba(255, 255, 255, 0.6);
+  	display: inline-block;
+}
+.frame-parent {
+  	position: absolute;
+  	top: 49px;
+  	left: 345px;
+  	width: 1075px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: space-between;
+  	gap: 0px;
+}
+.footer-logo {
+  	position: absolute;
+  	height: 40%;
+  	width: 20%;
+  	top: 23.46%;
+  	right: 78.82%;
+  	bottom: 23.14%;
+  	left: 2.57%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.all-rights-reserved {
+  	position: absolute;
+  	top: 307px;
+  	left: 571px;
+  	font-size: 14px;
+  	font-family: ABeeZee;
+  	color: #fff;
+  	text-align: right;
+  	display: inline-block;
+  	width: 298px;
+  	height: 17px;
+}
+.rectangle-parent {
+  	width: 100%;
+  	position: relative;
+  	height: 341px;
+  	text-align: left;
+  	font-size: 16px;
+  	color: #000;
+  	font-family: Actor;
+}
+
+
+
+.prfrences-child {
+    position: absolute;
+    top: 323px;
+    left: calc(50% - 480px);
+    background-color: #1b1b1e;
+    width: 978px;
+    height: 849px;
+}
+.vector-icon1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-parent {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 0%;
+    right: 79.18%;
+    bottom: 90.91%;
+    left: 0%;
+}
+.franais {
+    position: absolute;
+    top: 17px;
+    left: 44px;
+}
+.vector-group {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 71.82%;
+    right: 79.18%;
+    bottom: 19.09%;
+    left: 0%;
+}
+.toutes-les-heures {
+    position: absolute;
+    top: 17px;
+    left: 30px;
+}
+.vector-container {
+    position: absolute;
+    height: 9.09%;
+    width: 29.69%;
+    top: 47.3%;
+    right: 67.58%;
+    bottom: 43.61%;
+    left: 2.73%;
+}
+.group-div {
+    position: absolute;
+    height: 9.09%;
+    width: 23.89%;
+    top: 47.3%;
+    right: 40.5%;
+    bottom: 43.61%;
+    left: 35.61%;
+}
+.vector-icon5 {
+    position: absolute;
+    height: 100%;
+    width: 89.74%;
+    top: 0%;
+    right: 10.26%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.fois-par-semaine {
+    position: absolute;
+    top: 17px;
+    left: 39.87px;
+    display: inline-block;
+    width: 271.1px;
+}
+.vector-parent1 {
+    position: absolute;
+    height: 9.09%;
+    width: 35.38%;
+    top: 47.3%;
+    right: 1.93%;
+    bottom: 43.61%;
+    left: 62.68%;
+}
+.vector-parent2 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 11.97%;
+    right: 79.18%;
+    bottom: 78.94%;
+    left: 0%;
+}
+.vector-parent3 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 0%;
+    right: 52.79%;
+    bottom: 90.91%;
+    left: 26.39%;
+}
+.english {
+    position: absolute;
+    top: 17px;
+    left: 51px;
+}
+.vector-parent4 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 71.82%;
+    right: 52.79%;
+    bottom: 19.09%;
+    left: 26.39%;
+}
+.enrengistrer {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 76px);
+    display: inline-block;
+    width: 153px;
+    height: 34px;
+}
+.vector-parent5 {
+    position: absolute;
+    height: 10.73%;
+    width: 24.57%;
+    top: 89.27%;
+    right: 38.23%;
+    bottom: 0%;
+    left: 37.2%;
+    text-align: center;
+    color: var(--color-white);
+}
+.vector-parent6 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 11.97%;
+    right: 52.79%;
+    bottom: 78.94%;
+    left: 26.39%;
+}
+.vector-parent7 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 0%;
+    right: 26.39%;
+    bottom: 90.91%;
+    left: 52.79%;
+}
+.vietnam {
+    position: absolute;
+    top: 17px;
+    left: 45px;
+}
+.vector-parent8 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 71.82%;
+    right: 26.39%;
+    bottom: 19.09%;
+    left: 52.79%;
+}
+.vector-parent9 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 11.97%;
+    right: 26.39%;
+    bottom: 78.94%;
+    left: 52.79%;
+}
+.vector-parent10 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 0%;
+    right: 0%;
+    bottom: 90.91%;
+    left: 79.18%;
+}
+.vector-parent11 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 71.82%;
+    right: 0%;
+    bottom: 19.09%;
+    left: 79.18%;
+}
+.vector-parent12 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 11.97%;
+    right: 0%;
+    bottom: 78.94%;
+    left: 79.18%;
+}
+.vector-parent13 {
+    position: absolute;
+    height: 9.09%;
+    width: 20.82%;
+    top: 24.52%;
+    right: 39.14%;
+    bottom: 66.4%;
+    left: 40.05%;
+}
+.group-parent {
+    position: absolute;
+    height: 38.67%;
+    width: 61.04%;
+    top: 24.21%;
+    right: 18.47%;
+    bottom: 37.12%;
+    left: 20.49%;
+    text-align: justify;
+    font-size: var(--font-size-5xl);
+}
+.mes-prfrences {
+    position: absolute;
+    top: 213px;
+    left: calc(50% - 159px);
+    font-size: 40px;
+}
+.prfrences-item {
+    position: absolute;
+    top: -2207px;
+    left: 3346px;
+    width: 100px;
+    height: 100px;
+}
+.prfrences {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 1793px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-mini);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+}
+
