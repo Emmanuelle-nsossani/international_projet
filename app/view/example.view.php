@@ -1,1 +1,1 @@
-Example page
+<?= translateText("Example page", $lang); ?>
