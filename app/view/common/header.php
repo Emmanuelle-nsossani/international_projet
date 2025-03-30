@@ -31,8 +31,8 @@
             </a>
             <div class="first-header-sous">
                 <a class="link-button" href="">S'abonner</a>
-                <a href="">
-                    <img src="app/public/images/header-footer/person.svg" alt="">
+                <a id="icon-person" href="">
+                    <img src="app/public/images/header-footer/person.svg" alt="S'identifier">
                 </a>
             </div>
         </div>
@@ -40,7 +40,20 @@
             <nav>
                 <ul>
                     <li><a href="">Préventions</a></li>
-                    <li><a href="">Rubriques &#10095</a></li>
+                    <ul>
+                        <li>Rubriques &#10095</li>
+                        <div id="rub-menu">
+                            <li><a href="">True Crime</a></li>
+                            <li><a href="">Psychology oOf Murderers</a></li>
+                            <li><a href="">Dark Web</a></li>
+                            <li><a href="">Serial Killer</a></li>
+                            <li><a href="">Unsolved Cases</a></li>
+                            <li><a href="">Politics and Criminality</a></li>
+                            <li><a href="">Art</a></li>
+                            <li><a href="">Gangs</a></li>
+                            <li><a href="">Sociology of Religious Cult and Crime</a></li>
+                        </div>
+                    </ul>
                     <li><a href="">Contact</a></li>
                     <li>
                         <form action="">

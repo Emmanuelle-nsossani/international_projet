@@ -35,7 +35,8 @@
     color: var(--black);
 }
 
-body, html {
+body,
+html {
     margin: 0;
     font-family: 'AltoneTrial';
 
@@ -48,7 +49,9 @@ header {
     padding: 0 100px;
 }
 
-header a, header p {
+header a,
+header p,
+header li {
     color: var(--white);
     text-decoration: none;
 }
@@ -71,13 +74,13 @@ header a, header p {
     width: 70px;
 }
 
-img {
-    width: 50px;
+#icon-person img {
+    width: 35px;
 }
 
 .link-button {
-    background: var(--white);
-    color: black;
+    background: var(--yellow);
+    color: var(--white);
     padding: 10px;
     border-radius: 100px;
 }
@@ -92,7 +95,95 @@ img {
     margin: 0;
 }
 
-/* From Uiverse.io by Madflows */
+/* SOUS MENU */
+
+#rub-menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    transform: translateY(240px);
+    border-radius: 30px;
+    background-color: var(--black);
+}
+
+#rub-menu li {
+    padding: 10px 0;
+}
+
+header form button {
+    border: none;
+    background: none;
+}
+
+header form {
+    width: 180px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: 100px;
+    transition: border-radius 0.5s ease;
+    background: var(--white)
+}
+
+header form input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+header form:before {
+    content: "";
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+header form:focus-within {
+    border-radius: 10px;
+}
+
+header form input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+header form:focus-within:before {
+    transform: scale(1);
+}
+
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* sizing svg icons */
+header form svg {
+    width: 17px;
+    margin-top: 3px;
+}
+
+/* LIGHT MODE BUTTON */
 .toggle-switch {
     position: relative;
     width: 70px;
