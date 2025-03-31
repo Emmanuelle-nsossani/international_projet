@@ -1,6 +1,5 @@
 <?php
 
-
 require_once __DIR__ . '/app/includes/deepl.php';
 require_once __DIR__ . '/app/includes/session.php';
 
