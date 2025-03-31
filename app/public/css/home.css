@@ -30,6 +30,8 @@
     --font-headline-bis: 'COCOGOOSE', sans-serif;
     --font-subtitle: 'TypewriterPress', sans-serif;
     --font-text: 'AltoneTrial', sans-serif;
+    --font-size-h1: 3rem;
+    --font-size-p: 1.2rem;
 }
 
 * {
@@ -54,7 +56,8 @@ body {
 body,
 html {
     margin: 0;
-    font-family: 'AltoneTrial';
+    font-family: var(--font-text);
+    font-size: 16px;
 }
 
 body {
@@ -109,6 +112,7 @@ header #button-rub-menu:hover {
 }
 
 #icon-person svg {
+    height: auto;
     width: 35px;
     fill: var(--white);
 }
@@ -396,4 +400,66 @@ footer {
     border-top: 2px solid var(--white);
     font-size: 14px;
     font-family: var(--font-text);
+}
+
+/* HOME PAGE */
+
+#home-page {
+    position: relative;
+    z-index: -3;
+    background: var(--black);
+
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--font-size-h1);
+    font-family: var(--font-headline);
+    color: var(--green);
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+#presentation {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; 
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    justify-items: center;
+}
+
+#presentation-content {
+    margin: auto;
+    z-index: 1; 
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--black);
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    width: 80%;
+    top: -30px;
+}
+
+#background-image {
+    width: -webkit-fill-available;
+    object-fit: cover; 
+    z-index: -1; 
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#article {
+    margin: 10vh 0;
+    background: url('../images/image-exemple.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
 }

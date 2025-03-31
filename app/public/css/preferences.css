@@ -1,15 +1,3 @@
-.vector-icon {
-    position: absolute;
-    height: 75.07%;
-    width: 111.04%;
-    top: 76.58%;
-    right: -2.36%;
-    bottom: -51.65%;
-    left: -8.68%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
 /* Common CSS to copy paste everywhere */
 
 @import url('https://fonts.cdnfonts.com/css/top-secret-stamp');
@@ -30,6 +18,8 @@
 }
 
 :root {
+    transition: all 0.4s ease;
+    /* dark mode */
     --black: #1B1B1E;
     --red: #96031A;
     --yellow: #FAA916;
@@ -42,15 +32,37 @@
     --font-text: 'AltoneTrial', sans-serif;
 }
 
+* {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* light mode */
+body.light-mode {
+    --black: #FFF8F0;
+    --white: #1B1B1E;
+}
+
+/* Transition des autres éléments si nécessaire */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
 ::selection {
     background-color: var(--yellow);
     color: var(--black);
 }
 
-body, html {
+body,
+html {
     margin: 0;
     font-family: 'AltoneTrial';
+}
 
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.transition-active {
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* ---------- HEADER ---------- */
@@ -60,9 +72,18 @@ header {
     padding: 0 100px;
 }
 
-header a, header p {
+header a,
+header p,
+header li {
     color: var(--white);
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header a:hover,
+header #button-rub-menu:hover {
+    text-decoration: line-through;
+    transition: all 0.3s ease;
 }
 
 #first-header {
@@ -80,16 +101,21 @@ header a, header p {
 }
 
 #logo-header {
-    width: 70px;
+    width: 60px;
 }
 
-img {
-    width: 50px;
+#logo-header path {
+    fill: var(--white);
+}
+
+#icon-person svg {
+    width: 35px;
+    fill: var(--white);
 }
 
 .link-button {
-    background: var(--white);
-    color: black;
+    background: var(--yellow);
+    color: var(--white);
     padding: 10px;
     border-radius: 100px;
 }
@@ -104,7 +130,112 @@ img {
     margin: 0;
 }
 
-/* From Uiverse.io by Madflows */
+/* SOUS MENU */
+
+#button-rub-menu {
+    cursor: pointer;
+}
+
+#rub-menu {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    position: absolute;
+    transform: translateY(240px);
+    border-radius: 30px;
+    background-color: var(--black);
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+#rub-menu.active {
+    max-height: 700px; 
+    padding: 20px;
+}
+
+#rub-menu li {
+    padding: 10px 0;
+}
+
+header form button {
+    border: none;
+    background: none;
+}
+
+header form {
+    width: 180px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: 100px;
+    transition: border-radius 0.5s ease;
+    background: var(--white)
+}
+
+.light-mode header form {
+    outline: 2px solid var(--white);
+    background: var(--black)
+}
+
+header form input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+header form:before {
+    content: "";
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+header form:focus-within {
+    border-radius: 5px;
+}
+
+header form input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+header form:focus-within:before {
+    transform: scale(1);
+}
+
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* sizing svg icons */
+header form svg {
+    width: 17px;
+    margin-top: 3px;
+}
+
+/* LIGHT MODE BUTTON */
 .toggle-switch {
     position: relative;
     width: 70px;
@@ -135,7 +266,7 @@ img {
 }
 
 .checkbox:checked~.slider {
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 .slider::before {
@@ -160,122 +291,111 @@ img {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
     transform: translateX(10px);
-    background-color: var(--white);
+    background-color: var(--black);
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 
 
-/*-------FOOTER-------*/
 
-.group-child {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	background-color: #000;
-  	width: 1440px;
-  	height: 341px;
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: var(--black);
+    padding: 40px 100px 20px;
+    color: var(--white);
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.social-icon-twitter {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 28px;
-    height: 28px;
-}
-
-.social-icon-facebook {
-    position: absolute;
-    top: 0px;
-    left: 40px;
-    width: 28px;
-    height: 28px;
-}
-
-.social-icon-instagram {
-    position: absolute;
-    top: 0px;
-    left: 80px;
-    width: 28px;
-    height: 28px;
-}
-
-.social-icons-container {
-    width: 108px;
-    position: relative;
-    height: 28px;
-}
-
-.help-menu {
-  	position: relative;
-  	letter-spacing: 3px;
-  	line-height: 18px;
-  	text-transform: uppercase;
-}
-
-.lorem-ipsum {
-  	margin: 0;
-  	white-space: pre-wrap;
-}
-
-.blank-line {
-  	margin: 0;
-}
-
-.about-features-works-container {
-  	width: 113px;
-  	position: relative;
-  	line-height: 19px;
-  	font-family: ABeeZee;
-  	color: rgba(255, 255, 255, 0.6);
-  	display: inline-block;
-}
-
-.help-menu-parent {
+.footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 26px;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
-.about-features-works-container1 {
-  	position: relative;
-  	line-height: 19px;
-  	font-family: ABeeZee;
-  	color: rgba(0, 0, 0, 0.6);
+
+.footer-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 20px; 
 }
-.about-features-works-container2 {
-  	width: 149px;
-  	position: relative;
-  	line-height: 19px;
-  	font-family: ABeeZee;
-  	color: rgba(255, 255, 255, 0.6);
-  	display: inline-block;
-}
-.frame-parent {
-  	position: absolute;
-  	top: 49px;
-  	left: 345px;
-  	width: 1075px;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: flex-start;
-  	justify-content: space-between;
-  	gap: 0px;
-}
+
 .footer-logo {
-  	position: absolute;
-  	height: 40%;
-  	width: 20%;
-  	top: 23.46%;
-  	right: 78.82%;
-  	bottom: 23.14%;
-  	left: 2.57%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
+    width: 120px; 
+    height: auto;
+}
+
+.social {
+    display: flex;
+    position: relative;
+    width: 108px;
+    height: 28px;
+}
+
+.social a {
+    display: block;
+}
+
+.social img {
+    width: 28px;
+    height: 28px;
+}
+
+.social .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social .icon1 {
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+
+.social .icon2 {
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-nav-section h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-subtitle);
+    font-size: 18px;
+}
+
+.footer-nav-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-section li {
+    margin-bottom: 10px;
+}
+
+.footer-nav-section a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-text);
+    line-height: 19px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid var(--white);
+    font-size: 14px;
+    font-family: var(--font-text);
 }
 .all-rights-reserved {
   	position: absolute;
@@ -299,263 +419,7 @@ img {
   	font-family: Actor;
 }
 
+/* PREFERENCES */
 
 
-.prfrences-child {
-    position: absolute;
-    top: 323px;
-    left: calc(50% - 480px);
-    background-color: #1b1b1e;
-    width: 978px;
-    height: 849px;
-}
-.vector-icon1 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-parent {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 0%;
-    right: 79.18%;
-    bottom: 90.91%;
-    left: 0%;
-}
-.franais {
-    position: absolute;
-    top: 17px;
-    left: 44px;
-}
-.vector-group {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 71.82%;
-    right: 79.18%;
-    bottom: 19.09%;
-    left: 0%;
-}
-.toutes-les-heures {
-    position: absolute;
-    top: 17px;
-    left: 30px;
-}
-.vector-container {
-    position: absolute;
-    height: 9.09%;
-    width: 29.69%;
-    top: 47.3%;
-    right: 67.58%;
-    bottom: 43.61%;
-    left: 2.73%;
-}
-.group-div {
-    position: absolute;
-    height: 9.09%;
-    width: 23.89%;
-    top: 47.3%;
-    right: 40.5%;
-    bottom: 43.61%;
-    left: 35.61%;
-}
-.vector-icon5 {
-    position: absolute;
-    height: 100%;
-    width: 89.74%;
-    top: 0%;
-    right: 10.26%;
-    bottom: 0%;
-    left: 0%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.fois-par-semaine {
-    position: absolute;
-    top: 17px;
-    left: 39.87px;
-    display: inline-block;
-    width: 271.1px;
-}
-.vector-parent1 {
-    position: absolute;
-    height: 9.09%;
-    width: 35.38%;
-    top: 47.3%;
-    right: 1.93%;
-    bottom: 43.61%;
-    left: 62.68%;
-}
-.vector-parent2 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 11.97%;
-    right: 79.18%;
-    bottom: 78.94%;
-    left: 0%;
-}
-.vector-parent3 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 0%;
-    right: 52.79%;
-    bottom: 90.91%;
-    left: 26.39%;
-}
-.english {
-    position: absolute;
-    top: 17px;
-    left: 51px;
-}
-.vector-parent4 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 71.82%;
-    right: 52.79%;
-    bottom: 19.09%;
-    left: 26.39%;
-}
-.enrengistrer {
-    position: absolute;
-    top: 20px;
-    left: calc(50% - 76px);
-    display: inline-block;
-    width: 153px;
-    height: 34px;
-}
-.vector-parent5 {
-    position: absolute;
-    height: 10.73%;
-    width: 24.57%;
-    top: 89.27%;
-    right: 38.23%;
-    bottom: 0%;
-    left: 37.2%;
-    text-align: center;
-    color: var(--color-white);
-}
-.vector-parent6 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 11.97%;
-    right: 52.79%;
-    bottom: 78.94%;
-    left: 26.39%;
-}
-.vector-parent7 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 0%;
-    right: 26.39%;
-    bottom: 90.91%;
-    left: 52.79%;
-}
-.vietnam {
-    position: absolute;
-    top: 17px;
-    left: 45px;
-}
-.vector-parent8 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 71.82%;
-    right: 26.39%;
-    bottom: 19.09%;
-    left: 52.79%;
-}
-.vector-parent9 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 11.97%;
-    right: 26.39%;
-    bottom: 78.94%;
-    left: 52.79%;
-}
-.vector-parent10 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 0%;
-    right: 0%;
-    bottom: 90.91%;
-    left: 79.18%;
-}
-.vector-parent11 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 71.82%;
-    right: 0%;
-    bottom: 19.09%;
-    left: 79.18%;
-}
-.vector-parent12 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 11.97%;
-    right: 0%;
-    bottom: 78.94%;
-    left: 79.18%;
-}
-.vector-parent13 {
-    position: absolute;
-    height: 9.09%;
-    width: 20.82%;
-    top: 24.52%;
-    right: 39.14%;
-    bottom: 66.4%;
-    left: 40.05%;
-}
-.group-parent {
-    position: absolute;
-    height: 38.67%;
-    width: 61.04%;
-    top: 24.21%;
-    right: 18.47%;
-    bottom: 37.12%;
-    left: 20.49%;
-    text-align: justify;
-    font-size: var(--font-size-5xl);
-}
-.mes-prfrences {
-    position: absolute;
-    top: 213px;
-    left: calc(50% - 159px);
-    font-size: 40px;
-}
-.prfrences-item {
-    position: absolute;
-    top: -2207px;
-    left: 3346px;
-    width: 100px;
-    height: 100px;
-}
-.prfrences {
-    width: 100%;
-    position: relative;
-    background-color: var(--color-white);
-    height: 1793px;
-    overflow: hidden;
-    text-align: left;
-    font-size: var(--font-size-mini);
-    color: var(--color-black);
-    font-family: var(--font-inter);
-}
 
