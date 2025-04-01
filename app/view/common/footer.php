@@ -64,6 +64,7 @@
 
 <script defer="defer" src="app/public/js/header.js"></script>
 <script defer="defer" src="app/public/js/light-mode.js"></script>
+<script defer="defer" src="app/public/js/map.js"></script>
 
 </body>
 

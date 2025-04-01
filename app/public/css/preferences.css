@@ -18,7 +18,7 @@
 }
 
 :root {
-    transition: all 0.4s ease;
+    --transition: all 0.4s ease;
     /* dark mode */
     --black: #1B1B1E;
     --red: #96031A;
@@ -30,22 +30,58 @@
     --font-headline-bis: 'COCOGOOSE', sans-serif;
     --font-subtitle: 'TypewriterPress', sans-serif;
     --font-text: 'AltoneTrial', sans-serif;
+    --font-size-h1: 3rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-p: 1.2rem;
 }
 
 * {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+.light-mode h1 {
+    color: #283A47;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--font-size-h1);
+    font-family: var(--font-headline);
+    color: var(--green);
+}
+
+h2 {
+    font-family: var(--font-subtitle);
+    font-size: var(--font-size-h2)
+}
+
+h3 {
+    font-family: var(--font-subtitle);
+    font-size: var(--font-size-h3)
+}
+
+p {
+    font-size: 1.2rem;
+}
+
 /* light mode */
 body.light-mode {
     --black: #FFF8F0;
     --white: #1B1B1E;
+    --green: #FFF8F0;
 }
 
 /* Transition des autres éléments si nécessaire */
 body {
     transition: background-color 0.4s ease, color 0.4s ease;
+    background: var(--green);
 }
+
+.light-mode body {
+    background: var(--black);
+}
+
 ::selection {
     background-color: var(--yellow);
     color: var(--black);
@@ -54,11 +90,8 @@ body {
 body,
 html {
     margin: 0;
-    font-family: 'AltoneTrial';
-}
-
-body {
-    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: var(--font-text);
+    font-size: 16px;
 }
 
 .transition-active {
@@ -70,6 +103,11 @@ body {
 header {
     background-color: var(--black);
     padding: 0 100px;
+}
+
+.light-mode header,
+.light-mode footer {
+    background-color: var(--grey);
 }
 
 header a,
@@ -109,8 +147,19 @@ header #button-rub-menu:hover {
 }
 
 #icon-person svg {
+    height: auto;
     width: 35px;
     fill: var(--white);
+    transition: var(--transition);
+}
+
+#icon-person svg:hover {
+    fill: var(--yellow);
+    transition: var(--transition);
+}
+
+.light-mode #icon-person svg:hover {
+    fill: var(--red);
 }
 
 .link-button {
@@ -150,8 +199,12 @@ header #button-rub-menu:hover {
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
+.light-mode #rub-menu {
+    background: var(--grey);
+}
+
 #rub-menu.active {
-    max-height: 700px; 
+    max-height: 700px;
     padding: 20px;
 }
 
@@ -296,7 +349,40 @@ header form svg {
     box-shadow: none;
 }
 
+#post-header {
+    width: 100vw;
+    margin: 0 0 50px 0 ;
+}
+
+/*  LOG HEADER  */
+
+#account {
+    padding: 10px;
+    gap: 8px;
+    top: 60px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: var(--black);
+    align-items: center;
+    border: 1px solid var(--yellow);
+    border-radius: 10px;
+}
+
+#account.active {
+    display: flex;
+}
+
+.light-mode #account {
+    border: 1px solid var(--red);
+}
+
 /* ---------- FOOTER ---------- */
+
+#pre-footer {
+    width: 100vw;
+    margin: 100px 0 0 0;
+}
 
 footer {
     background-color: var(--black);
@@ -315,99 +401,12 @@ footer {
 .footer-brand {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    gap: 20px; 
-}
-
-
-
-#footer-logo {
-    width: 120px; 
-    height: auto;
-}
-
-#footer-logo path {
-    fill: var(--white);
-}
-
-.social {
-    display: flex;
-    position: relative;
-    width: 108px;
-    height: 28px;
-}
-
-.social a {
-    display: block;
-}
-
-.social img {
-    width: 28px;
-    height: 28px;
-}
-
-.social .icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.social .icon1 {
-    position: absolute;
-    top: 0;
-    left: 40px;
-}
-
-.social .icon2 {
-    position: absolute;
-    top: 0;
-    left: 80px;
-}
-
-.footer-nav {
-    display: flex;
-    gap: 80px;
-}
-
-.footer-nav-section h4 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: var(--font-subtitle);
-    font-size: 18px;
-}
-
-.footer-nav-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav-section li {
-    margin-bottom: 10px;
-}
-
-.footer-nav-section a {
-    color: var(--white);
-    text-decoration: none;
-    font-family: var(--font-text);
-    line-height: 19px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    gap: 20px; 
+    align-items: center;
+    gap: 20px;
 }
 
 .footer-logo {
-    width: 120px; 
+    width: 120px;
     height: auto;
 }
 
@@ -482,27 +481,12 @@ footer {
     font-family: var(--font-text);
 }
 
-.all-rights-reserved {
-  	position: absolute;
-  	top: 307px;
-  	left: 571px;
-  	font-size: 14px;
-  	font-family: ABeeZee;
-  	color: #fff;
-  	text-align: right;
-  	display: inline-block;
-  	width: 298px;
-  	height: 17px;
+#footer-logo path {
+    fill: var(--white);
+      width: 120px; 
+    height: auto;
 }
-.rectangle-parent {
-  	width: 100%;
-  	position: relative;
-  	height: 341px;
-  	text-align: left;
-  	font-size: 16px;
-  	color: #000;
-  	font-family: Actor;
-}
+  
 
 /* PREFERENCES */
 

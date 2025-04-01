@@ -487,108 +487,64 @@ footer {
     height: auto;
 }
   
-/* ------------ AUTH ------------ */
+/* -------- PREVENTIONS ------- */
 
-main {
-    background-image: url(../images/affiche.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
+h1 {
+    text-align: center;
+    color: var(--white);
+}
+
+h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p {
+    color: var(--white);
 }
 
 #intro {
-    color: var(--white);
-    text-align: center;
-}
-
-#intro h1 {
+    margin: 0 100px;
     color: var(--white);
 }
 
-.light-mode main form {
-    background: var(--grey);
-}
-
-main form {
-    gap: 20px;
-    padding: 30px;
-    margin: auto;
+#map-conteneur {
+    width: 60%;
     display: flex;
-    flex-direction: column;
-    background-color: var(--black);
-    color: var(--white);
+}
+
+#map {
+    padding: 20px;
+    fill: var(--grey);
+    stroke: var(--green);
+    width: 100%;
+    border: 1px solid var(--yellow);
     border-radius: 30px;
+    background: #1b1b1e55;
+}
+
+#map path:hover {
+    fill: var(--red);
+    transition: all 0.2s ease;
+} 
+
+#stat-conteneur {
     width: 30%;
-
-}
-
-.form-item {
-    gap: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-main form input {
-    padding: 8px;
-    font-weight: bold;
-    font-family: var(--font-size-p);
-    color: var(--yellow);
-    border: none;
-    border-radius: 10px;
-}
-
-.light-mode main form input {
-    color: var(--red);
-}
-
-main form input::placeholder {
-    font-family: var(--font-text);
-    color: var(--grey);
-}
-
-main button {
-    cursor: pointer;
-    padding: 7px 20px;
-    margin: auto;
-    text-align: center;
-    width: fit-content;
-    border: none;
-    background: var(--yellow);
-    color: var(--white);
+    padding: 40px;
+    border: 1px solid var(--yellow);
     border-radius: 30px;
-    font-family: var(--font-subtitle);
-    font-size: 1.2rem;
+    background: #1b1b1e55;
 }
 
-.light-mode main button {
-    background: var(--red);
-    color: var(--black);
+#stats {
+    margin: 0 100px;
+    display: flex;
+    gap: 20px;
 }
 
-main a {
-    color: var(--grey);
-    font-family: var(--font-text);
-    font-size: 0.8rem;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.light-mode main a {
-    color: var(--red);
-}
-
-main a:hover {
-    font-weight: bold;
-    text-decoration:underline;
-    transition: var(--transition);
-}
-
-main label {
-    font-weight: bold;
-}
-
-#message {
-    color: var(--red);
+#source {
+    color: var(--yellow);
+    font-size: 1rem;
     text-align: center;
-    font-weight: bold;
 }
