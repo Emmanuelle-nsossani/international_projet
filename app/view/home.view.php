@@ -47,10 +47,10 @@
     </section>
     <section id="portrait">
         <div id="portrait-conteneur">
-            <img src="app/public/images/papier.png" alt="paper-background">
-            <img src="app/public/images/portrait-example-2.jpg" alt="portrait">
-            <h2>Jean Paul <br>Le Psychopathe</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <img id="background-portrait" src="app/public/images/papier.png" alt="paper-background">
+            <img id="image-portrait" src="app/public/images/portrait-example-2.jpg" alt="portrait">
+            <h2 id="h2-portrait">Jean Paul <br>Le Psychopathe</h2>
+            <p id="p-portrait">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
             <div class="button-more">
                 <p>Lire la suite &#129042;</p>
             </div>
