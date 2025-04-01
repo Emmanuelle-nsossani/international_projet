@@ -31,6 +31,8 @@
     --font-subtitle: 'TypewriterPress', sans-serif;
     --font-text: 'AltoneTrial', sans-serif;
     --font-size-h1: 3rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
     --font-size-p: 1.2rem;
 }
 
@@ -48,6 +50,7 @@ body.light-mode {
 body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 ::selection {
     background-color: var(--yellow);
     color: var(--black);
@@ -155,7 +158,7 @@ header #button-rub-menu:hover {
 }
 
 #rub-menu.active {
-    max-height: 700px; 
+    max-height: 700px;
     padding: 20px;
 }
 
@@ -322,12 +325,12 @@ footer {
 .footer-brand {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    gap: 20px; 
+    align-items: center;
+    gap: 20px;
 }
 
 .footer-logo {
-    width: 120px; 
+    width: 120px;
     height: auto;
 }
 
@@ -418,6 +421,16 @@ h1 {
     color: var(--green);
 }
 
+h2 {
+    font-family: var(--font-subtitle);
+    font-size: var(--font-size-h2)
+}
+
+h3 {
+    font-family: var(--font-subtitle);
+    font-size: var(--font-size-h3)
+}
+
 p {
     font-size: 1.2rem;
 }
@@ -427,7 +440,7 @@ p {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr; 
+    grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
     color: var(--white);
@@ -437,7 +450,7 @@ p {
 
 #presentation-content {
     margin: auto;
-    z-index: 1; 
+    z-index: 1;
     padding: 20px;
     border-radius: 10px;
     color: var(--black);
@@ -450,16 +463,60 @@ p {
 
 #background-image {
     width: -webkit-fill-available;
-    object-fit: cover; 
-    z-index: -1; 
+    object-fit: cover;
+    z-index: -1;
     grid-row: 1;
     grid-column: 1;
 }
 
 #article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 10vh 0;
-    background: url('../images/image-exemple.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 70vh;
+    color: var(--white);
+}
+
+#article h2 {
+    margin-top: 100px;
+    position: absolute;
+}
+
+#article-carousel {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    background: url('../images/portrait-example.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100%;
+}
+
+#fire {
+    width: 15px;
+    fill: var(--white);
+}
+
+#info-article {
+    margin-top: 30vh;
+    width: 65%;
+    grid-column: 2;
+}
+
+.categorie-button {
+    background-color: var(--red);
+    border-radius: 50px;
+    width: fit-content;    
+}
+
+.button-more {
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.categorie-button p, .button-more p {
+    padding: 5px 10px;
+    margin: 0;
 }
