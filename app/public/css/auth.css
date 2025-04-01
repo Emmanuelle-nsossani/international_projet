@@ -554,3 +554,9 @@ main a:hover {
 main label {
     font-weight: bold;
 }
+
+#message {
+    color: var(--red);
+    text-align: center;
+    font-weight: bold;
+}

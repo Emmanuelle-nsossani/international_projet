@@ -27,7 +27,7 @@
                     </p>
                 </div>
             </div>
-            <a href="index.php">
+            <a href="home-log.php">
                 <svg id="logo-header" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 288 280">
                     <!-- Generator: Adobe Illustrator 28.7.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 136)  -->
                     <g>

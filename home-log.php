@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-$page_title = "Tableau de bord";
+$page_title = "ICE CRIME";
 $css = "home.css";
 
 ob_start();

@@ -5,8 +5,8 @@
     </div>
     <form action="app/includes/auth.php" method="POST">
         <div class="form-item">
-            <label for="pseudo">Entrer votre pseudo :</label>
-            <input type="text" name="pseudo" placeholder="<?= translateText("Pseudo", $lang); ?>" required>
+            <label for="email">Entrer votre adresse mail :</label>
+            <input type="email" name="email" placeholder="<?= translateText("Adresse mail", $lang); ?>" required>
         </div>
         <div class="form-item">
             <label for="password">Entrer votre mot de passe :</label>
