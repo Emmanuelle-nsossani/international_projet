@@ -397,3 +397,13 @@ footer {
     font-size: 14px;
     font-family: var(--font-text);
 }
+
+
+#footer-logo {
+    width: 120px; 
+    height: auto;
+}
+
+#footer-logo path {
+    fill: var(--white);
+}
