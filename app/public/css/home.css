@@ -18,7 +18,7 @@
 }
 
 :root {
-    transition: all 0.4s ease;
+    --transition: all 0.4s ease;
     /* dark mode */
     --black: #1B1B1E;
     --red: #96031A;
@@ -150,6 +150,16 @@ header #button-rub-menu:hover {
     height: auto;
     width: 35px;
     fill: var(--white);
+    transition: var(--transition);
+}
+
+#icon-person svg:hover {
+    fill: var(--yellow);
+    transition: var(--transition);
+}
+
+.light-mode #icon-person svg:hover {
+    fill: var(--red);
 }
 
 .link-button {
@@ -344,6 +354,28 @@ header form svg {
     margin: 0 0 50px 0 ;
 }
 
+/*  LOG HEADER  */
+
+#account {
+    padding: 10px;
+    gap: 8px;
+    top: 60px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: var(--black);
+    align-items: center;
+    border: 1px solid var(--yellow);
+    border-radius: 10px;
+}
+
+#account.active {
+    display: flex;
+}
+
+.light-mode #account {
+    border: 1px solid var(--red);
+}
 
 /* ---------- FOOTER ---------- */
 
