@@ -619,3 +619,13 @@ footer {
 .light-mode #portrait .button-more {
     border-color: var(--white);
 }
+
+#welcome h1 {
+    color: var(--white);
+    margin: auto;
+    text-align: center;
+}
+
+#welcome h1 span {
+    text-transform: uppercase;
+}

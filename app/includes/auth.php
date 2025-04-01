@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        header("Location: ../../dashboard.php");
+        header("Location: ../../home-log.php");
         exit;
     } else {
         echo "Pseudo ou mot de passe incorrect !";

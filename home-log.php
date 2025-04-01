@@ -15,9 +15,9 @@ $page_title = "Tableau de bord";
 $css = "home.css";
 
 ob_start();
-echo "<h1>" . translateText("Bienvenue", $lang) . " " . $_SESSION['username'] . " !</h1>";
-echo "<a href='logout.php'>" . translateText("Se déconnecter", $lang) . "</a>";
+include 'app/view/home-log.view.php'; // Include the page content
+
 $content = ob_get_clean();
 
-include 'app/view/common/layout.php';
+include 'app/view/common/layout-log.php';
 ?>
