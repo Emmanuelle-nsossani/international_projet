@@ -90,3 +90,4 @@
             </nav>
         </div>
     </header>
+<img id="post-header" src="app/public/images/pre-footer.png" alt="">

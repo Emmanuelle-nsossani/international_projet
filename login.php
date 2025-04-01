@@ -8,7 +8,7 @@ $lang = $_GET['lang'] ?? ($_SESSION['lang'] ?? 'fr');
 $_SESSION['lang'] = $lang;
 
 $page_title = "Connexion";
-$css = "home.css";
+$css = "auth.css";
 
 ob_start();
 
