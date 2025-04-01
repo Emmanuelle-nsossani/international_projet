@@ -7,6 +7,7 @@
     <title><?= $page_title ?></title>
     <link rel="stylesheet" href="app/public/css/<?= $css ?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="favicon.ico" />
 </head>
 
@@ -60,7 +61,7 @@
         <div id="second-header">
             <nav>
                 <ul>
-                    <li><a href="profile.php"><?= translateText("Preventions", $lang); ?></a></li>
+                    <li><a href="preventions.php"><?= translateText("Preventions", $lang); ?></a></li>
                     <ul>
                         <li id="button-rub-menu"><?= translateText("Rubriques", $lang); ?> &#10095</li>
                         <div id="rub-menu">
@@ -90,3 +91,4 @@
             </nav>
         </div>
     </header>
+<img id="post-header" src="app/public/images/pre-footer.png" alt="">

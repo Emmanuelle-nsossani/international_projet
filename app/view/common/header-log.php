@@ -1,9 +1,35 @@
-<img id="pre-footer" src="app/public/images/pre-footer.png" alt="">
+<!DOCTYPE html>
+<html lang="<?= $lang ?>">
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-brand">
-        <svg id="footer-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 288 280">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $page_title ?></title>
+    <link rel="stylesheet" href="app/public/css/<?= $css ?>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+    <header>
+        <div id="first-header">
+            <div class="first-header-sous">
+                <!-- From Uiverse.io by Madflows -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input id="theme-toggle" type="checkbox" class="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div id="language-menu">
+                    <p>
+                        <a href="?lang=en">EN</a> | <a href="?lang=fr">FR</a> | <a href="?lang=bg">BG</a> <!-- | <a href="?lang=vi">VN</a> -->
+                    </p>
+                </div>
+            </div>
+            <a href="home-log.php">
+                <svg id="logo-header" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 288 280">
                     <!-- Generator: Adobe Illustrator 28.7.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 136)  -->
                     <g>
                         <g id="Calque_1">
@@ -22,52 +48,52 @@
                         </g>
                     </g>
                 </svg>
-            <div class="social">
-                <a href="#"><img class="icon" alt="Social Media 1" src="app/public/images/1.svg"></a>
-                <a href="#"><img class="icon1" alt="Social Media 2" src="app/public/images/2.svg"></a>
-                <a href="#"><img class="icon2" alt="Social Media 3" src="app/public/images/3.svg"></a>
+            </a>
+            <div class="first-header-sous">
+                <p><?=$_SESSION['username']?></p>
+                <a id="icon-person" href="#">
+                    <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 15.503A5.041 5.041 0 1 0 16 5.42a5.041 5.041 0 0 0 0 10.083zm0 2.215c-6.703 0-11 3.699-11 5.5v3.363h22v-3.363c0-2.178-4.068-5.5-11-5.5z" />
+                    </svg>
+                </a>
+                <div id="account">
+                    <a href="profile.php">Mon profil</a>
+                    <a href="preferences.php">Mes préférences</a>
+                    <a href="logout.php">Se déconnecter</a>
+                </div>
             </div>
         </div>
-        
-        <div class="footer-nav">
-            <div class="footer-nav-section">
+        <div id="second-header">
+            <nav>
                 <ul>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem ipsum</a></li>
+                    <li><a href="preventions.php"><?= translateText("Preventions", $lang); ?></a></li>
+                    <ul>
+                        <li id="button-rub-menu"><?= translateText("Rubriques", $lang); ?> &#10095</li>
+                        <div id="rub-menu">
+                            <li><a href=""><?= translateText("True Crime", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Psychology oOf Murderers", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Dark Web", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Serial Killer", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Unsolved Cases", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Politics and Criminality", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Art", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Gangs", $lang); ?></a></li>
+                            <li><a href=""><?= translateText("Sociology of Religious Cult and Crime", $lang); ?></a></li>
+                        </div>
+                    </ul>
+                    <li><a href=""><?= translateText("Contact", $lang); ?></a></li>
+                    <li>
+                        <form action="">
+                            <button>
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <input type="text" placeholder="<?= translateText("Search...", $lang); ?>" name="search">
+                        </form>
+                    </li>
                 </ul>
-            </div>
-            
-            <div class="footer-nav-section">
-                <ul>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem ipsum</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-nav-section">
-                <ul>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem</a></li>
-                </ul>
-            </div>
+            </nav>
         </div>
-    </div>
-    
-    <div class="footer-copyright">
-        IceCrimes © 2024-2025, Tout droits réservés
-    </div>
-</footer>
-
-
-<script defer="defer" src="app/public/js/header.js"></script>
-<script defer="defer" src="app/public/js/light-mode.js"></script>
-<script defer="defer" src="app/public/js/map.js"></script>
-
-</body>
-
-
-</html>
-
+    </header>
+<img id="post-header" src="app/public/images/pre-footer.png" alt="">
