@@ -402,6 +402,12 @@ footer {
     font-family: var(--font-text);
 }
 
+#footer-logo path {
+    fill: var(--white);
+      width: 120px; 
+    height: auto;
+}
+  
 /* HOME PAGE */
 
 #home-page {
