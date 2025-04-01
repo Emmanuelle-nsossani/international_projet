@@ -60,7 +60,7 @@
         <div id="second-header">
             <nav>
                 <ul>
-                    <li><a href=""><?= translateText("Preventions", $lang); ?></a></li>
+                    <li><a href="profile.php"><?= translateText("Preventions", $lang); ?></a></li>
                     <ul>
                         <li id="button-rub-menu"><?= translateText("Rubriques", $lang); ?> &#10095</li>
                         <div id="rub-menu">

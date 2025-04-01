@@ -1,3 +1,5 @@
+<img id="pre-footer" src="app/public/images/pre-footer.png" alt="">
+
 <footer>
     <div class="footer-container">
         <div class="footer-brand">
