@@ -1,5 +1,5 @@
 <main id="home-page">
-    <div id="presentation">
+    <section id="presentation">
         <div id="presentation-content">
             <h1>Ice Crime<br>Le meilleur du crime</h1>
             <p>
@@ -9,12 +9,12 @@
             </p>
         </div>
         <img id="background-image" src="app/public/images/paper-header.png" alt="">
-    </div>
-    <div id="article">
-    <h2>Article Populaire <svg id="fire" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910.000000 1280.000000"
-                    preserveAspectRatio="xMidYMid meet">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                        <path d="M3360 12790 c0 -5 -21 -145 -46 -312 -263 -1749 -693 -2985 -1437
+    </section>
+    <section id="article">
+        <h2>Article Populaire <svg id="fire" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910.000000 1280.000000"
+                preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                    <path d="M3360 12790 c0 -5 -21 -145 -46 -312 -263 -1749 -693 -2985 -1437
 -4138 -132 -204 -293 -431 -601 -850 -531 -718 -654 -907 -840 -1280 -226
 -454 -346 -864 -412 -1410 -22 -180 -25 -646 -5 -820 110 -972 534 -1831 1312
 -2660 512 -546 1321 -1127 1795 -1289 l91 -31 392 0 c215 0 391 3 391 6 0 3
@@ -27,9 +27,9 @@
 531 798 828 1631 915 2565 19 203 16 736 -6 945 -117 1154 -533 2233 -1297
 3371 -873 1300 -2145 2535 -3834 3722 l-180 127 -202 0 c-124 0 -203 -4 -203
 -10z" />
-                    </g>
-                </svg>
-            </h2>
+                </g>
+            </svg>
+        </h2>
         <div id="article-carousel">
             <div id="info-article">
                 <div class="categorie-button">
@@ -44,6 +44,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="portrait">
+        <div id="portrait-conteneur">
+            <img src="app/public/images/papier.png" alt="paper-background">
+            <img src="app/public/images/portrait-example-2.jpg" alt="portrait">
+            <h2>Jean Paul <br>Le Psychopathe</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <div class="button-more">
+                <p>Lire la suite &#129042;</p>
+            </div>
+        </div>
+    </section>
 
 </main>
