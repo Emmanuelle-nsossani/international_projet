@@ -1052,15 +1052,61 @@ xmlns:mapsvg="http://mapsvg.com"
 <p id="source">Source :  ocindex.net</p>
         </div>
     </section>
-    <section id="text">
-        <div>
-            <h3>Nos conseils pour votre sécurité et bien-être :</h3>
-            <ul>
-                <li>
-                    <p>Soyez vigilant dans votre quotidien. Fermez toujours vos portes à clé et évitez de partager des informations personnelles sensibles.</p>
-                </li>
-            </ul>
-
+    <section class="safety-section">
+    <img
+      src="app/public/images/safetybackground.svg"
+      alt="Safety background"
+      class="safety-bg"
+    />
+    <div class="safety-content">
+      <article class="safety-guidelines">
+        <h2 class="guidelines-title">
+          Nos conseils pour votre sécurité et bien-être :
+        </h2>
+        <div class="guidelines-text">
+          Sécurisez votre environnement :<br />
+          – Soyez vigilant dans votre quotidien. Fermez toujours vos portes à
+          clé et évitez de partager des informations personnelles sensibles.<br /><br />
+          – Restez attentif aux comportements suspects dans votre entourage et
+          n'hésitez pas à signaler toute situation préoccupante.<br /><br />
+          En cas de danger :<br />
+          – En cas d'urgence, appelez immédiatement les numéros de secours.
+          (Police, Pompiers, Urgences)<br />
+          – Si vous êtes victime ou témoin d'un crime, signalez-le aux autorités
+          ou sur des plateformes officielles.<br /><br />
+          Prendre soin de sa santé mentale :<br />
+          Les sujets de crime peuvent provoquer stress et anxiété. Si vous
+          ressentez le besoin d'en parler, n'hésitez pas à consulter un
+          professionnel ou à contacter une ligne d'écoute. Vous n'êtes pas seul.
         </div>
-    </section>
+      </article>
+
+      <article class="resources">
+        <h2 class="resources-title">Ressources utiles :</h2>
+        <div class="resources-content">
+          <div class="resources-text">
+            Numéros d'urgence :<br />
+            – Police : [Numéro] <br />
+            – Secours : [Numéro] <br />
+            – Ligne d'écoute pour les
+            victimes : [Numéro]<br /><br />
+            Associations et aide psychologique :<br />
+            – [Nom de l'association] : [Lien] <br />
+            – [Numéro ou lien vers l'aide
+            psychologique]<br />
+          </div>
+          <img
+            src="app/public/images/safetyimage.svg"
+            alt="Resources illustration"
+            class="resources-image"
+          />
+        </div>
+      </article>
+    </div>
+    <p class="safety-footer">
+      Soyez vigilant et protégez-vous. Si vous avez des doutes, agissez avec
+      prudence et demandez de l'aide. Votre sécurité et bien-être sont
+      essentiels.
+    </p>
+  </section>
 </main>
