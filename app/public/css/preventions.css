@@ -548,3 +548,78 @@ p {
     font-size: 1rem;
     text-align: center;
 }
+
+
+/* Safety section styles */
+.safety-section {
+    position: relative;
+    padding: 187px 57px;
+    margin-top: 92px;
+  }
+  
+  .safety-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .safety-content {
+    position: relative;
+    display: flex;
+    gap: 20px;
+  }
+  
+.safety-guidelines {
+    width: 54%;
+}
+  
+.guidelines-title {
+    color: rgba(253, 251, 248, 1);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 30px;
+}
+  
+.guidelines-text {
+    color: rgba(253, 251, 248, 1);
+    font-size: 18px;
+    line-height: 1.4;
+}
+  
+.resources {
+    width: 46%;
+}
+  
+.resources-title {
+    color: rgba(253, 251, 248, 1);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+  
+.resources-content {
+    margin-top: 30px;
+    padding-left: 10px;
+}
+  
+.resources-text {
+    color: rgba(253, 251, 248, 1);
+    font-size: 18px;
+    line-height: 1.4;
+}
+  
+.resources-image {
+    width: 260px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin: 70px 43px 0 auto;
+}
+  
+.safety-footer {
+    color: rgba(253, 251, 248, 1);
+    font-size: 18px;
+    margin: 50px 0 -33px;
+    position: relative;
+}
