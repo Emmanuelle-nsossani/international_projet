@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
- 
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Actor:wght@400&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap" />
-  	
-  	
-  	
-</head>
-<body>
-  	
-  	<div class="prfrences">
+<div class="prfrences">
 			<span class="text-7">Mes préférences</span>
 		<div class="wrapper-3">
 		<div class="box-3">
@@ -37,8 +21,9 @@
 		<div class="img-6">
 		<span class="text-12">1 fois par jour</span>
 		</div>
-		<div class="img-7"></div>
+		<div class="img-7">
 		<span class="text-13">1 fois par semaine</span>
+		</div>
 		</div>
 		<div class="wrapper-4">
 		<div class="img-8"><span class="text-14">Français</span></div>
@@ -49,4 +34,3 @@
 		<div class="pic-e"><span class="text-18">Enrengistrer</span></div>
 		</div>
   	</div>
-</html>
