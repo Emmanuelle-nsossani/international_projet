@@ -1,14 +1,6 @@
 <main id="home-page">
-    <section id="presentation">
-        <div id="presentation-content">
-            <h1>Ice Crime<br>Le meilleur du crime</h1>
-            <p>
-                Notre plateforme vous plonge au cœur des faits divers et des affaires criminelles. Restez informé des tendances, analysez les événements marquants et accédez à des ressources pour mieux appréhender la réalité qui nous entoure. <br><br>
-                <b>Connectez-vous pour personnaliser votre expérience, suivre vos affaires favorites et recevoir des alertes adaptées à vos préférences.</b><br><br>
-                Le crime ne dort jamais… Savez-vous vraiment ce qui se passe dans ce monde ?
-            </p>
-        </div>
-        <img id="background-image" src="app/public/images/paper-header.png" alt="">
+    <section id="welcome">
+        <h1>Bienvenue <span><?=$_SESSION['username']?></span> !</h1>
     </section>
     <section id="article">
         <h2>Article Populaire <svg id="fire" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910.000000 1280.000000"
